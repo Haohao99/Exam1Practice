@@ -201,9 +201,7 @@ def problem2b(rect, n, delta, win):
     #     corner_2_y = corner_2_y + delta
     #     rectangle.attach_to(win)
     #     win.render()
-
     rect.attach_to(win)
-    win.render()
     corner1 = rect.get_upper_left_corner()
     corner2 = rect.get_lower_right_corner()
 
