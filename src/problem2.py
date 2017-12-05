@@ -187,20 +187,33 @@ def problem2b(rect, n, delta, win):
       :type delta:  int
       :type win:    rg.RoseWindow
     """
+    # rect.attach_to(win)
+    # corner_1_x = rect.get_lower_left_corner().x
+    # corner_1_y = rect.get_upper_left_corner().y
+    # corner_2_x = rect.get_lower_right_corner().x
+    # corner_2_y = rect.get_lower_right_corner().y
+    # for k in range(n):
+    #     rectangle = rg.Rectangle(rg.Point(corner_1_x,corner_1_y),
+    #                              rg.Point(corner_2_x,corner_2_y))
+    #     corner_1_x = corner_1_x - delta
+    #     corner_1_y = corner_1_y - delta
+    #     corner_2_x = corner_2_x + delta
+    #     corner_2_y = corner_2_y + delta
+    #     rectangle.attach_to(win)
+    #     win.render()
+
     rect.attach_to(win)
-    corner_1_x = rect.get_lower_left_corner().x
-    corner_1_y = rect.get_upper_left_corner().y
-    corner_2_x = rect.get_lower_right_corner().x
-    corner_2_y = rect.get_lower_right_corner().y
+    win.render()
+    corner1 = rect.get_upper_left_corner()
+    corner2 = rect.get_lower_right_corner()
+
     for k in range(n):
-        rectangle = rg.Rectangle(rg.Point(corner_1_x,corner_1_y),
-                                 rg.Point(corner_2_x,corner_2_y))
-        corner_1_x = corner_1_x - delta
-        corner_1_y = corner_1_y - delta
-        corner_2_x = corner_2_x + delta
-        corner_2_y = corner_2_y + delta
-        rectangle.attach_to(win)
+        rect = rg.Rectangle(corner1, corner2)
+        corner1.move_to(corner1.x -  delta,corner1.y - delta)
+        corner2.move_to(corner2.x +  delta,corner2.y + delta)
+        rect.attach_to(win)
         win.render()
+
 
     # ------------------------------------------------------------------
     # : 3. Implement and test this function.
