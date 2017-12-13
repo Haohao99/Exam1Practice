@@ -160,7 +160,7 @@ def problem1a(m, n):
     for k in range(m**2,(n**2+1)):
         total = total + math.sin(k)
 
-    return  total
+    return total
 
     # ------------------------------------------------------------------
     # DONE: 3. Implement and test this function.

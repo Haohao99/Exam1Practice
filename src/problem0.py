@@ -306,7 +306,7 @@ def problem0c(circle, n, window):
         window.render(0.5)
 
     # ------------------------------------------------------------------
-    # DONE: 4. Implement and test this function.
+    # DON : 4. Implement and test this function.
     #          Tests have been written for you (above).
     #
     ####################################################################

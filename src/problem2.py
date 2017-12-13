@@ -169,8 +169,7 @@ def problem2b(rect, n, delta, win):
       -- A positive integer delta.
       -- An rg.RoseWindow.
     What goes out:  Nothing (i.e., None).
-    Side effects:
-      Draws n rg.Rectangles on the given rg.RoseWindow such that:
+    Side effects:bw such that:
         -- The first rg.Rectangle is the given one.
         -- Subsequent rg.Rectangles have the same center
             as the given rg.Rectangle, but their width
